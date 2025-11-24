@@ -78,5 +78,20 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
+ # Left street
+painter.goto(-300,0)
+
+for shading in range(shaded_lines):
+    painter.penup()
+    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
+    painter.pendown()
+    painter.forward(200)
+    painter.backward(200)
+    if g < 245:
+        g += 10
+    else:
+        g = 11
+
+
 wn = trtl.Screen()
 wn.mainloop()

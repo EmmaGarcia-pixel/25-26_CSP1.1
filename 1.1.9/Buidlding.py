@@ -34,6 +34,8 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
+'''
+
 # Right wall
 painter.goto(-120, 115)
 painter.left(50)
@@ -78,15 +80,19 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
+'''
+
  # Left street
-painter.goto(-300,0)
+painter.penup()
+painter.goto(-500,100)
+painter.pendown()
 
 for shading in range(shaded_lines):
     painter.penup()
     painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
     painter.pendown()
-    painter.forward(200)
-    painter.backward(200)
+    painter.forward(420)
+    painter.backward(420)
     if g < 245:
         g += 10
     else:

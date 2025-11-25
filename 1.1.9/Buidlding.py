@@ -9,12 +9,12 @@ painter.pensize(4)
 painter.speed(500)
 painter.pendown()
 
-# change the color
+# Change the color
 wn = trtl.Screen()
 wn.colormode(255)
-r = 91
-g = 11
-b = 247
+r = 173
+g = 89
+b = 80
 painter.pencolor(r,g,b)
 
 shaded_lines = 100
@@ -34,7 +34,13 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
-'''
+# Change the color
+wn = trtl.Screen()
+wn.colormode(255)
+r = 168
+g = 82
+b = 72
+painter.pencolor(r,g,b)
 
 # Right wall
 painter.goto(-120, 115)
@@ -50,6 +56,14 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
+
+# Change the color
+wn = trtl.Screen()
+wn.colormode(255)
+r = 204
+g = 94
+b = 82
+painter.pencolor(r,g,b)
 
 # Roof 1st half
 painter.goto(-300,200)
@@ -80,11 +94,17 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
-'''
+# Change color
+wn = trtl.Screen()
+wn.colormode(255)
+r = 0
+g = 0
+b = 0
+painter.pencolor(r,g,b)
 
  # Left street
 painter.penup()
-painter.goto(-500,100)
+painter.goto(-500,92)
 painter.pendown()
 
 for shading in range(shaded_lines):
@@ -97,6 +117,24 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
+
+# Right street
+painter.penup()
+painter.goto(-120, -85)
+painter.left(50)
+painter.pendown()
+
+for shading in range(shaded_lines):
+    painter.penup()
+    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
+    painter.pendown()
+    painter.forward(420)
+    painter.backward(420)
+    if g < 245:
+        g += 10
+    else:
+        g = 11
+
 
 
 wn = trtl.Screen()

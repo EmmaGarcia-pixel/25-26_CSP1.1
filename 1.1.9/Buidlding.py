@@ -21,7 +21,9 @@ shaded_lines = 100
 length = 200
 
 # Left wall
+painter.penup()
 painter.right(25)
+painter.pendown()
 
 for shading in range(shaded_lines):
     painter.penup()
@@ -43,8 +45,10 @@ b = 72
 painter.pencolor(r,g,b)
 
 # Right wall
+painter.penup()
 painter.goto(-120, 115)
 painter.left(50)
+painter.pendown()
 
 for shading in range(shaded_lines):
     painter.penup()
@@ -66,7 +70,9 @@ b = 82
 painter.pencolor(r,g,b)
 
 # Roof 1st half
+painter.penup()
 painter.goto(-300,200)
+painter.pendown()
 
 for shading in range(shaded_lines):
     painter.penup()
@@ -80,8 +86,10 @@ for shading in range(shaded_lines):
         g = 11
 
  # Roof 2nd half
+ painter.penup()
 painter.goto(-120, 285)
 painter.right(50)
+painter.pendown()
 
 for shading in range(shaded_lines):
     painter.penup()

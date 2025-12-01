@@ -36,8 +36,6 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
-'''
-
 # Change the color
 wn = trtl.Screen()
 wn.colormode(255)
@@ -104,8 +102,6 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
-'''
-
 # Change color
 wn = trtl.Screen()
 wn.colormode(255)
@@ -130,6 +126,8 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
+'''
+
 # Change color
 wn = trtl.Screen()
 wn.colormode(255)
@@ -143,6 +141,9 @@ painter.penup()
 painter.goto(-400,0)
 painter.pendown()
 
+shaded_lines -= 50
+length -= 50
+
 for shading in range(shaded_lines):
     painter.penup()
     painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
@@ -153,6 +154,8 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
+
+'''
 
 # Right street
 painter.penup()

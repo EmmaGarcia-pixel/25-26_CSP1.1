@@ -4,10 +4,56 @@ painter = trtl.Turtle()
 
 # Set base coordinates\pensize\speed
 painter.penup()
-painter.goto(-300,200)
 painter.pensize(4)
 painter.speed(500)
 painter.pendown()
+
+shaded_lines = 1000
+length = 2000
+
+# Change the color
+wn = trtl.Screen()
+wn.colormode(255)
+r = 107
+g = 205
+b = 227
+painter.pencolor(r,g,b)
+
+# Sky
+painter.goto(-500,400)
+
+for shading in range(shaded_lines):
+    painter.penup()
+    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
+    painter.pendown()
+    painter.forward(1000)
+    painter.backward(1000)
+    if g < 245:
+        g += 10
+    else:
+        g = 11
+
+# Change the color
+wn = trtl.Screen()
+wn.colormode(255)
+r = 150
+g = 150
+b = 150
+painter.pencolor(r,g,b)
+
+# Side walk
+painter.goto(-500,-100)
+
+for shading in range(shaded_lines):
+    painter.penup()
+    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
+    painter.pendown()
+    painter.forward(1000)
+    painter.backward(1000)
+    if g < 245:
+        g += 10
+    else:
+        g = 11
 
 shaded_lines = 100
 length = 200
@@ -22,6 +68,7 @@ painter.pencolor(r,g,b)
 
 # Left wall
 painter.penup()
+painter.goto(-300,200)
 painter.right(25)
 painter.pendown()
 
@@ -154,7 +201,7 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
-
+        
 '''
 
 # Right street

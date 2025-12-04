@@ -5,11 +5,11 @@ painter = trtl.Turtle()
 # Set base coordinates\pensize\speed
 painter.penup()
 painter.pensize(4)
-painter.speed(500)
+painter.speed(500000)
 painter.pendown()
 
-shaded_lines = 1000
-length = 2000
+shaded_lines = 300
+length = 600
 
 # Change the color
 wn = trtl.Screen()
@@ -19,7 +19,11 @@ g = 205
 b = 227
 painter.pencolor(r,g,b)
 
-# Sky
+#---------- Sky -------------
+
+
+
+# Base color
 painter.goto(-500,400)
 
 for shading in range(shaded_lines):
@@ -32,6 +36,8 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
+
+'''
 
 # Change the color
 wn = trtl.Screen()
@@ -54,6 +60,10 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
+
+'''
+
+#---------- Building 1 ------------
 
 shaded_lines = 100
 length = 200
@@ -149,6 +159,8 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
+#---------- Street -------------
+
 # Change color
 wn = trtl.Screen()
 wn.colormode(255)
@@ -214,14 +226,37 @@ for shading in range(shaded_lines):
     painter.penup()
     painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
     painter.pendown()
-    painter.forward(420)
-    painter.backward(420)
+    painter.forward(4200)
+    painter.backward(4200)
     if g < 245:
         g += 10
     else:
         g = 11
 
+# Change the color
+wn = trtl.Screen()
+wn.colormode(255)
+r = 150
+g = 150
+b = 150
+painter.pencolor(r,g,b)
 
+
+# Right sidewalk
+painter.penup()
+painter.goto(-120, -200)
+painter.pendown()
+
+for shading in range(shaded_lines):
+    painter.penup()
+    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
+    painter.pendown()
+    painter.forward(4200)
+    painter.backward(4200)
+    if g < 245:
+        g += 10
+    else:
+        g = 11
 
 wn = trtl.Screen()
 wn.mainloop()

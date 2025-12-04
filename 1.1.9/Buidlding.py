@@ -244,7 +244,7 @@ painter.pencolor(r,g,b)
 
 # Right sidewalk
 painter.penup()
-painter.goto(-120, -200)
+painter.goto(-120, -285)
 painter.pendown()
 
 for shading in range(shaded_lines):

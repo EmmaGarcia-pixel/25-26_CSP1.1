@@ -260,7 +260,7 @@ for shading in range(shaded_lines):
 
 # Left sidewalk
 painter.penup()
-painter.goto(-500,-100)
+painter.goto(-500,-110)
 painter.right(50)
 painter.pendown()
 
@@ -268,8 +268,8 @@ for shading in range(shaded_lines):
     painter.penup()
     painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
     painter.pendown()
-    painter.forward(4200)
-    painter.backward(4200)
+    painter.forward(420)
+    painter.backward(420)
     if g < 245:
         g += 10
     else:

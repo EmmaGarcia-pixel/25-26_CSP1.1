@@ -258,5 +258,24 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
+# Left sidewalk
+painter.penup()
+painter.goto(-500,0)
+painter.right(100)
+painter.pendown()
+
+for shading in range(shaded_lines):
+    painter.penup()
+    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
+    painter.pendown()
+    painter.forward(4200)
+    painter.backward(4200)
+    if g < 245:
+        g += 10
+    else:
+        g = 11
+
+
+
 wn = trtl.Screen()
 wn.mainloop()

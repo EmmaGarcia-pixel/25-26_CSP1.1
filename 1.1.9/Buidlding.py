@@ -223,7 +223,6 @@ g = 150
 b = 150
 painter.pencolor(r,g,b)
 
-
 # Right sidewalk
 painter.penup()
 painter.goto(-120, -285)

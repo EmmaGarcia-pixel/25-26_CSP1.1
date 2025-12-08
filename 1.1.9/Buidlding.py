@@ -21,8 +21,6 @@ painter.pencolor(r,g,b)
 
 #---------- Sky -------------
 
-
-
 # Base color
 painter.goto(-500,400)
 
@@ -36,32 +34,6 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
-
-'''
-
-# Change the color
-wn = trtl.Screen()
-wn.colormode(255)
-r = 150
-g = 150
-b = 150
-painter.pencolor(r,g,b)
-
-# Side walk
-painter.goto(-500,-100)
-
-for shading in range(shaded_lines):
-    painter.penup()
-    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
-    painter.pendown()
-    painter.forward(1000)
-    painter.backward(1000)
-    if g < 245:
-        g += 10
-    else:
-        g = 11
-
-'''
 
 #---------- Building 1 ------------
 
@@ -142,10 +114,18 @@ for shading in range(shaded_lines):
     else:
         g = 11
 
+'''
+
  # Roof 2nd half
 painter.penup()
+
+'''
+
 painter.goto(-120, 285)
 painter.right(50)
+
+'''
+
 painter.pendown()
 
 for shading in range(shaded_lines):
@@ -158,6 +138,8 @@ for shading in range(shaded_lines):
         g += 10
     else:
         g = 11
+        
+'''
 
 #---------- Street -------------
 

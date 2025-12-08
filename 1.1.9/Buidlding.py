@@ -98,7 +98,7 @@ g = 94
 b = 82
 painter.pencolor(r,g,b)
 
-# Roof 1st half
+# Roof
 painter.penup()
 painter.goto(-300,200)
 painter.pendown()
@@ -115,6 +115,22 @@ for shading in range(shaded_lines):
         g = 11
 
 '''
+# Roof 1st half
+painter.penup()
+painter.goto(-300,200)
+painter.pendown()
+
+for shading in range(shaded_lines):
+    painter.penup()
+    painter.goto(painter.xcor(), painter.ycor()-int((length/shaded_lines)))
+    painter.pendown()
+    painter.forward(200)
+    painter.backward(200)
+    if g < 245:
+        g += 10
+    else:
+        g = 11
+
 
  # Roof 2nd half
 painter.penup()
